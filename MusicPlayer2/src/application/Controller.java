@@ -132,6 +132,13 @@ public class Controller implements Initializable{
 		ID3v2 id3v2Tagnew;
     	id3v2Tagnew = mp3fileToSave.getId3v2Tag();
     	id3v2Tagnew.setTitle(this.titelField.getText());
+    	id3v2Tagnew.setTrack(this.titelNumberField.getText());
+    	id3v2Tagnew.setAlbum(this.albumField.getText());
+    	id3v2Tagnew.setArtist(this.artistField.getText());
+    	id3v2Tagnew.setYear(this.yearField.getText());
+    	id3v2Tagnew.setComment(this.commentField.getText());
+    	id3v2Tagnew.setComposer(this.composerField.getText());
+    	
     	try {
     		FileChooser fc = new FileChooser();
     		fc.getExtensionFilters().add(new ExtensionFilter("MP3 Files", "*.mp3"));
