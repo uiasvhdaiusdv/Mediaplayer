@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="15.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleStopButtonActionOnClick" prefHeight="64.0" prefWidth="64.0">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="127.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlePlayButtonActionOnClick" prefHeight="64.0" prefWidth="64.0">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/play-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="238.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlePauseButtonActionOnClick" prefHeight="64.0" prefWidth="64.0">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button layoutX="10.0" layoutY="271.0" mnemonicParsing="false" onAction="#singleFileChooser" styleClass="selectFileBtn" text="Select File..." />
+            <Slider fx:id="volumeSlider" layoutX="292.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="125.0" prefWidth="20.0" />
+            <Label fx:id="fileName" layoutX="26.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" styleClass="fileName" />
+         </children>
+      </Pane>
+   </left>
+   <right>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="titelNumberField" layoutX="85.0" layoutY="6.0" prefHeight="25.0" prefWidth="350.0" />
+            <Label layoutX="8.0" layoutY="70.0" text="Album: " />
+            <Button layoutX="366.0" layoutY="271.0" mnemonicParsing="false" onAction="#saveMp3File" styleClass="selectFileBtn" text="Save File..." />
+            <Label layoutX="8.0" layoutY="100.0" text="Künstler:" />
+            <Label layoutX="8.0" layoutY="130.0" text="Jahr:" />
+            <Label layoutX="8.0" layoutY="40.0" text="Titel: " />
+            <Label layoutX="8.0" layoutY="10.0" text="Titelnummer: " />
+            <Label layoutX="8.0" layoutY="160.0" text="Kommentar:" />
+            <Label layoutX="8.0" layoutY="190.0" text="Komponist:" />
+            <TextField fx:id="titelField" layoutX="85.0" layoutY="36.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="albumField" layoutX="85.0" layoutY="66.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="artistField" layoutX="85.0" layoutY="96.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="yearField" layoutX="85.0" layoutY="126.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="commentField" layoutX="85.0" layoutY="156.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="composerField" layoutX="85.0" layoutY="186.0" prefHeight="25.0" prefWidth="350.0" />
+         </children>
+      </Pane>
+   </right>
+</BorderPane>
